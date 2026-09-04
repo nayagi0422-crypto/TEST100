@@ -1,0 +1,14 @@
+name: hanmi-lean
+
+# 삼성전자 LEAN 구성과 독립적인 한미반도체 백테스트 실행 구성입니다.
+services:
+  hanmi-backtest:
+    build:
+      context: ./lean-hanmi
+    image: hanmi-lean-module:local
+    environment:
+      HANMI_START_DATE: ${HANMI_START_DATE:-2024-01-01}
+      HANMI_END_DATE: ${HANMI_END_DATE:-2025-01-01}
+    volumes:
+      - ./lean-results/hanmi:/results
+    restart: "no"

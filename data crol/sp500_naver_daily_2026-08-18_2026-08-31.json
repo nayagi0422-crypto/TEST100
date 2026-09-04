@@ -1,0 +1,56 @@
+{
+  "dataset_name": "네이버페이 증권 S&P 500 일별 시세 패턴 분석 데이터셋",
+  "symbol": "SPI@SPX",
+  "instrument": "S&P 500",
+  "source": {
+    "provider": "네이버페이 증권",
+    "url": "https://finance.naver.com/world/sise.naver?symbol=SPI@SPX",
+    "retrieved_at": "2026-09-01",
+    "table_columns": ["날짜", "종가", "전일비", "시가", "고가", "저가"],
+    "note": "네이버 일별 시세 표에서 확인한 최근 10거래일을 정리함"
+  },
+  "coverage": {
+    "start_date": "2026-08-18",
+    "end_date": "2026-08-31",
+    "observations": 10,
+    "frequency": "trading_day",
+    "chronological_order": "ascending"
+  },
+  "analysis_summary": {
+    "start_close": 7691.76,
+    "end_close": 7686.14,
+    "cumulative_return_pct": -0.0731,
+    "up_days": 4,
+    "down_days": 5,
+    "baseline_days": 1,
+    "high_close": 7730.99,
+    "low_close": 7641.16,
+    "support_zone": [7638.0, 7650.0],
+    "resistance_zone": [7710.0, 7770.0],
+    "interpretation": "7,640~7,770 부근의 박스권 횡보이며 단기적으로 중립에서 약간 약세",
+    "observed_patterns": [
+      "7,640 전후 지지",
+      "7,710~7,770 부근 저항",
+      "급등 다음 날 되돌림",
+      "상승·하락이 교차하는 평균회귀 성격"
+    ]
+  },
+  "limitations": [
+    "표본이 10거래일뿐이므로 장기 패턴이나 통계적 유의성을 판단할 수 없음",
+    "네이버 표에 거래량이 없어 거래량 기반 분석을 수행하지 않음",
+    "전일비는 종가 차이로 재계산한 값이며 조정주가·배당 효과를 반영하지 않음",
+    "패턴 관찰은 투자 신호 또는 수익을 보장하지 않음"
+  ],
+  "records": [
+    {"date":"2026-08-18","close":7691.76,"change":53.30,"open":7700.04,"high":7713.95,"low":7688.63,"volume":null,"return_pct":null,"direction":"baseline"},
+    {"date":"2026-08-19","close":7707.98,"change":16.22,"open":7716.74,"high":7743.93,"low":7700.07,"volume":null,"return_pct":0.2106,"direction":"up"},
+    {"date":"2026-08-20","close":7641.16,"change":66.82,"open":7690.49,"high":7699.96,"low":7639.01,"volume":null,"return_pct":-0.8675,"direction":"down"},
+    {"date":"2026-08-21","close":7674.37,"change":33.21,"open":7665.68,"high":7697.11,"low":7660.06,"volume":null,"return_pct":0.4346,"direction":"up"},
+    {"date":"2026-08-24","close":7652.86,"change":21.51,"open":7663.38,"high":7670.30,"low":7638.17,"volume":null,"return_pct":-0.2803,"direction":"down"},
+    {"date":"2026-08-25","close":7677.28,"change":24.42,"open":7676.66,"high":7686.11,"low":7650.92,"volume":null,"return_pct":0.3185,"direction":"up"},
+    {"date":"2026-08-26","close":7675.70,"change":1.58,"open":7666.88,"high":7690.73,"low":7657.41,"volume":null,"return_pct":-0.0206,"direction":"down"},
+    {"date":"2026-08-27","close":7730.99,"change":55.29,"open":7710.34,"high":7741.27,"low":7689.89,"volume":null,"return_pct":0.7201,"direction":"up"},
+    {"date":"2026-08-28","close":7711.76,"change":19.23,"open":7735.17,"high":7771.48,"low":7700.91,"volume":null,"return_pct":-0.2484,"direction":"down"},
+    {"date":"2026-08-31","close":7686.14,"change":25.62,"open":7697.52,"high":7697.52,"low":7665.06,"volume":null,"return_pct":-0.3323,"direction":"down"}
+  ]
+}
